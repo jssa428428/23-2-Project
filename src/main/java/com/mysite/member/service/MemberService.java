@@ -1,6 +1,7 @@
 package com.mysite.member.service;
 
 import com.mysite.member.dto.MemberDTO;
+import com.mysite.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

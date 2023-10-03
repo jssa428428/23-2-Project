@@ -1,5 +1,6 @@
 package com.mysite.member.dto;
 
+import com.mysite.member.entity.MemberEntity;
 import lombok.*;
 
 // save.html의 name과 DTO 객체의 필드가 동일하면 알아서 DTO 객체를 하나 만들어서 Setter 호출 후 각각 알아서 담아준다.
@@ -17,4 +18,13 @@ public class MemberDTO {
     private String memberEmail;
     private String memberPassword;
     private String memberName;
+
+    public static MemberDTO toMemberDTO(MemberEntity memberEntity) {
+        MemberDTO memberDTO = new MemberDTO();
+        memberDTO.setId(memberEntity.getId());;
+        memberDTO.setMemberEmail(memberEntity.getMemberEmail());
+        memberDTO.setMemberPassword(memberEntity.getMemberPassword());
+        memberDTO.setMemberName(memberEntity.getMemberName());
+        return memberDTO;
+    }
 }

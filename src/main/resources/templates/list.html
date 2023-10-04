@@ -21,6 +21,9 @@
         <td th:text="${member.memberPassword}"></td>
         <td th:text="${member.memberName}"></td>
         <td>
+        <!-- query string /member?id=1
+            rest api /member/1 -->
+            <!-- @{|내용}(thymeleaf 문법) - 서버에서 가져온 데이터를 같이 표현할 때 사용 -->
             <a th:href="@{|/member/${member.id}|}">조회</a>
         </td>
         <td>
